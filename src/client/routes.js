@@ -1,5 +1,5 @@
 import App from './app/app.react';
-import Home from './pages/home.react';
+import Home from './pages/faceCard';
 import Login from './pages/login.react';
 import Me from './pages/me.react';
 import NotFound from './pages/notfound.react';
@@ -13,6 +13,6 @@ export default (
     <NotFoundRoute handler={NotFound} name="not-found" />
     <Route handler={Login} name="login" />
     <Route handler={Me} name="me" />
-    <Route handler={Todos} name="todos" />
+    <Route handler={Todos} name="todos" path="asdfasdf" />
   </Route>
 );

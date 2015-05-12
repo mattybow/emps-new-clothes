@@ -8,7 +8,7 @@ export default class Menu extends PureComponent {
     return (
       <header>
         <h1>
-          <a href="https://github.com/steida/este">Este.js</a> App
+          <a href="https://github.com/steida/este">Menu</a> App
         </h1>
         <ul>
           <li><Link to="home">Home</Link></li>
