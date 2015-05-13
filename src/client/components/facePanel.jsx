@@ -3,17 +3,19 @@ import React from 'react';
 require('./facePanel.scss');
 
 export default class facePanel extends React.Component {
+
 	render() {
 		return (
 			<div id="centerPanel">
 				<div className="candidate-face">
-					<div className="face-holder">
-						<div className="img-container left-side">
-							<img src="assets/img/hillary_2016_05_08.png" />
-						</div>
-						<div className="img-container right-side">
-							<img src="assets/img/hillary_2016_05_08.png" />
-						</div>
+					<span className="fa fa-scissors fa-2x"></span>
+					<div>
+						<div></div>
+						<img src="assets/img/hillary_2016_05_08.png" />
+					</div>
+					<div>
+						<div></div>
+						<img src="assets/img/hillary_2016_05_08.png" />
 					</div>
 				</div>
 				<div className="candidate-details">

@@ -1,55 +1,90 @@
-#centerPanel{
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+$dotted-line-color1: hsla(0, 0%, 0%, 0);
+$dotted-line-color2: hsla(0, 0%, 100%, 1);
+$scissors-color: hsla(0, 0%, 40%, 1);
+
+#centerPanel {
 	width:60%;
 	text-align:center;
-	padding-top:100px;
+	margin-top: 100px;
 
-	img{
-		width:100%;
+	img {
+		max-width:100%;
 	}
 }
 
-.face-holder{
-
-	.img-container{
+.candidate-face {
+	& > div {
 		display:inline-block;
 		width:50%;
 		position:relative;
 		overflow:hidden;
 
-		img{
-			position:relative;
+		& > div {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 1px;
+			background: repeating-linear-gradient(
+				180deg,
+				$dotted-line-color1,
+				$dotted-line-color1 1em,
+				$dotted-line-color2 1em,
+				$dotted-line-color2 2em
+			);
+			transition: opacity .2s;
+			z-index: 100;
 		}
 	}
-}
 
-.left-side {
-	img{
-		left:50%;
+	& > div:first-of-type {
+		img {
+			left:50%;
+		}
+
+		& > div {
+			right: 0;
+		}
+	}
+
+	& > div:last-of-type {
+		img {
+			right:50%;
+		}
+
+		& > div {
+			left: 0;
+		}
+	}
+
+	span {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -.5em) rotate(90deg);
+		color: $scissors-color;
+		transition: opacity .2s;
 	}
 }
-.right-side {
-	img{
-		right:50%;
-	}
-}
 
-.candidate-details{
+.candidate-details {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	
-	& > *{
+
+	& > * {
 		display:inline-block;
 	}
-
 }
-.name-holder{
-	font-size:50px;
+
+.name-holder {
+	font-size: 3.5em;
 	font-weight:200;
 	text-align:right;
-	padding-right:20px;
+	padding-right:1.2rem;
 }
-.details-holder{
+
+.details-holder {
 	border-left:1px solid grey;
 	text-align:left;
-	padding-left:20px;
+	padding-left:1.2em;
 	font-weight:300;
 }
