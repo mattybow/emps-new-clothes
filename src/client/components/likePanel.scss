@@ -1,13 +1,13 @@
 .likePanel{
 	text-align:center;
-	width:20%;
+	width:22.5%;
 	height:100%;
 	font-family: 'Oleo Script', cursive;
 }
 .likePanel-text{
 	font-size:3em;
 	position:relative;
-	top:25%;
+	top: 40%;
 	opacity:0.2;
-	transform: rotateZ(-5deg);
+	transform: translateY(-50%) rotateZ(-5deg);
 }

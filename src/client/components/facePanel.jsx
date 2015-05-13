@@ -11,11 +11,11 @@ export default class facePanel extends React.Component {
 					<span className="fa fa-scissors fa-2x"></span>
 					<div>
 						<div></div>
-						<img src="assets/img/hillary_2016_05_08.png" />
+						<img src="assets/img/hillary_2016_05_08_cropped.png" />
 					</div>
 					<div>
 						<div></div>
-						<img src="assets/img/hillary_2016_05_08.png" />
+						<img src="assets/img/hillary_2016_05_08_cropped.png" />
 					</div>
 				</div>
 				<div className="candidate-details">

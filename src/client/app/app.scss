@@ -1,6 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300);
 @import url(http://fonts.googleapis.com/css?family=Oleo+Script:400,700);
 
-a{
+a {
   color:burlywood;
+}
+
+.page {
+	max-width: 80em;
+	margin: 0 auto;
 }
