@@ -2,7 +2,13 @@ import React from 'react';
 
 require('./facePanel.scss');
 
+var Velocity
+
 export default class facePanel extends React.Component {
+
+	componentDidMount() {
+		Velocity = require('velocity-animate')
+	}
 
 	render() {
 		return (
@@ -28,5 +34,9 @@ export default class facePanel extends React.Component {
 				</div>
 			</div>
 		);
+	}
+
+	animate(vote) {
+		// animation time
 	}
 }

@@ -9,7 +9,7 @@ export default class LikePanel extends React.Component {
 		var classes = cx('likePanel',this.props.lr);
 		return (
 			<div className={classes}>
-				<div className="likePanel-text">{this.props.panelText}</div>
+				<div className="likePanel-text" onClick={this.props.voteCb}>{this.props.panelText}</div>
 			</div>
 		);
 	}
