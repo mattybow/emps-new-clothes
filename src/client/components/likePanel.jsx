@@ -3,9 +3,9 @@ import cx from "classnames";
 
 require('./likePanel.scss');
 
-export default class LikePanel extends React.Component {
+export default React.createClass({
 
-	render(){
+	render: function(){
 		var classes = cx('likePanel',this.props.lr);
 		return (
 			<div className={classes}>
@@ -13,4 +13,4 @@ export default class LikePanel extends React.Component {
 			</div>
 		);
 	}
-}
+});

@@ -4,13 +4,13 @@ require('./facePanel.scss');
 
 var Velocity
 
-export default class facePanel extends React.Component {
+export default React.createClass({
 
-	componentDidMount() {
+	componentDidMount: function() {
 		Velocity = require('velocity-animate')
-	}
+	},
 
-	render() {
+	render: function() {
 		return (
 			<div id="centerPanel">
 				<div className="candidate-face">
@@ -34,9 +34,9 @@ export default class facePanel extends React.Component {
 				</div>
 			</div>
 		);
-	}
+	},
 
-	animate(vote) {
+	animate: function(vote) {
 		// animation time
 	}
-}
+});

@@ -7,9 +7,9 @@ import FacePanel from '../components/facePanel';
 
 require('./faceCard.scss')
 
-export default class Home extends React.Component {
+export default React.createClass({
 
-	render() {
+	render: function() {
 		return (
 			<DocumentTitle title={msg('home.title')}>
 				<div id="panels">
@@ -19,10 +19,10 @@ export default class Home extends React.Component {
 				</div>
 			</DocumentTitle>
 		);
-	}
+	},
 
-	_likePanelEvent(vote, e) {
+	_likePanelEvent: function(vote, e) {
 		this.refs.facePanel.animate(vote)
 	}
 
-}
+});
