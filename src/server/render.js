@@ -56,6 +56,7 @@ function getPageHtml(Handler, appState) {
   const appScriptSrc = config.isProduction
     ? '/build/app.js?v=' + config.version
     : '//localhost:8888/build/app.js';
+    //: '//192.168.0.4:8888/build/app.js';  //TESTING MOBILE REPLACE IP ADDRESS
 
   let scriptHtml = `
     <script>

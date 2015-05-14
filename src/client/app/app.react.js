@@ -51,7 +51,7 @@ export default class App extends React.Component {
   render() {
     var classes = cx('page',this.state.device);
     return (
-      <DocumentTitle title='Este.js App'>
+      <DocumentTitle title='faceValue'>
         <div className={classes}>
           <RouteHandler />
         </div>

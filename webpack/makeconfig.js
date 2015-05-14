@@ -36,6 +36,7 @@ module.exports = function(isDevelopment) {
     devtool: isDevelopment ? 'eval-source-map' : '',
     entry: {
       app: isDevelopment ? [
+        //'webpack-dev-server/client?http://192.168.0.4:8888',  //TESTING MOBILE REPLACE IP ADDRESS
         'webpack-dev-server/client?http://localhost:8888',
         // Why only-dev-server instead of dev-server:
         // https://github.com/webpack/webpack/issues/418#issuecomment-54288041
