@@ -1,3 +1,6 @@
+// phone testing requires explicit network ip
+// if not working, replace exports with 'localhost' for desktop-only
+
 var os = require('os');
 
 var interfaces = os.networkInterfaces();
@@ -12,11 +15,6 @@ for (var k in interfaces) {
 }
 
 
-// normal testing
-module.exports = 'localhost'
+console.log('access on phone via ' + localAddress + ':8000');
 
-// phone testing
-// module.exports = localAddress;
-
-// print ip to terminal for easy access
-// console.log(localAddress)
+module.exports = localAddress;
