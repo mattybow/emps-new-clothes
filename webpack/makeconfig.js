@@ -36,7 +36,7 @@ module.exports = function(isDevelopment) {
     devtool: isDevelopment ? 'eval-source-map' : '',
     entry: {
       app: isDevelopment ? [
-        'webpack-dev-server/client?http://' + require('../devServerUrl') + ':8888',
+        'webpack-dev-server/client?http://' + require('./devServerUrl') + ':8888',
         // Why only-dev-server instead of dev-server:
         // https://github.com/webpack/webpack/issues/418#issuecomment-54288041
         'webpack/hot/only-dev-server',
