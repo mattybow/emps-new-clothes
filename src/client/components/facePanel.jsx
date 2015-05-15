@@ -37,6 +37,6 @@ export default React.createClass({
 	},
 
 	animate: function(vote) {
-		// animation time
+		return 'hey'
 	}
 });

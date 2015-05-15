@@ -55,7 +55,7 @@ function getPageHtml(Handler, appState) {
   const appHtml = `<div id="app">${React.renderToString(<Handler />)}</div>`;
   const appScriptSrc = config.isProduction
     ? '/build/app.js?v=' + config.version
-    : '//' + require('../../devServerUrl') + ':8888/build/app.js';
+    : '//' + require('../../webpack/devServerUrl') + ':8888/build/app.js';
 
   let scriptHtml = `
     <script>
