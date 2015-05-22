@@ -1,0 +1,20 @@
+.page-header{
+	border-left:20px solid rgba(20,20,20,.2);
+	padding-left: 20px;
+	margin-top:20px;
+
+	& > *{
+		margin-top:0;
+		margin-bottom:0;
+	}
+
+	p{
+		border-top: 1px solid rgba(0,0,0,.1);
+		padding-top:20px;
+	}
+
+	h2{
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		padding-bottom:20px;
+	}
+}

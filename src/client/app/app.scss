@@ -1,8 +1,10 @@
 @import url("http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300");
 @import url("http://fonts.googleapis.com/css?family=Oleo+Script:400,700");
+@import url("http://fonts.googleapis.com/css?family=Noto+Sans:400,700");
 
 body{
   -webkit-font-smoothing: antialiased;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 a {
@@ -20,4 +22,12 @@ button{
   border: 1px solid rgba(0,0,0,.2);
   padding: 5px 20px;
   background-color: transparent;
+}
+
+.round{
+  border-radius:100px;
+}
+
+.cursive{
+  font-family: 'Oleo Script', cursive;
 }

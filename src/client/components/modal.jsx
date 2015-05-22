@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import {Navigation} from 'react-router';
+import request from 'superagent';
 
 require('./modal.scss');
 
@@ -15,7 +16,16 @@ export default React.createClass({
 	},
 
 	puzzleDoneHandler:function(){
-		this.transitionTo('/hillary');
+		request.post('/humans')
+				.send({data:'I am a human'})
+				.end((err,res) => {
+					if(res.ok){
+						this.transitionTo('/candidate');
+					} else {
+						alert('check your pulse you might be robot!');
+					}
+				});
+		
 	},
 
 	render: function() {

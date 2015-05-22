@@ -1,0 +1,41 @@
+#home{
+	position:relative;
+	overflow:hidden;
+}
+.h-centered{
+	text-align:center;
+}
+.v-centered{
+	display:flex;
+	flex-flow: row wrap;
+	align-items: center;
+	align-content:center;
+}
+.container{
+	padding-left:50px;
+	height:80vh;
+}
+.brand{
+	position:absolute;
+	left:0;
+	top:0;
+	padding-left:50px;
+}
+.subtext{
+	max-width:400px;
+}
+.wiper{
+	background-color: white;
+	transform: translateY(50%) translateX(200%) scale(2) rotateZ(-45deg);
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	opacity:1;
+}
+
+@media (max-width:375px){
+	.brand, .container{
+		padding-left:20px;
+	}
+}

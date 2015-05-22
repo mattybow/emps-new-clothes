@@ -1,0 +1,12 @@
+.candidate-card{
+	height:100px;
+	width:100px;
+	background-color:papayawhip;
+	margin-right:10px;
+}
+.candidates-card-container{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	margin:30px 20px;
+}

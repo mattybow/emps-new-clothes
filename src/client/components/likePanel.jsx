@@ -9,7 +9,7 @@ export default React.createClass({
 		var classes = cx('likePanel',this.props.lr);
 		return (
 			<div className={classes}>
-				<div className="likePanel-text" onClick={this.props.voteCb}>{this.props.panelText}</div>
+				<div className="likePanel-text cursive" onClick={this.props.voteCb}>{this.props.panelText}</div>
 			</div>
 		);
 	}
