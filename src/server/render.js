@@ -60,6 +60,7 @@ function getPageHtml(Handler, appState) {
       type: Handler,
       context: Marty.createContext()
   }).then(function (render) {
+    console.log(render.html);
       const appScriptSrc = config.isProduction
         ? '/build/app.js?v=' + config.version
         : '//' + require('../../devServerUrl') + ':8888/build/app.js';
