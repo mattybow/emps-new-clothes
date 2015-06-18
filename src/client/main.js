@@ -9,6 +9,7 @@ const app = document.getElementById('app');
 
 Router.run(routes, Router.HistoryLocation, (Handler) => {
   Marty.rehydrate();
+  window.Marty = Marty;
   React.render(<Handler />, app);
 });
 

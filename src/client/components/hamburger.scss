@@ -1,0 +1,28 @@
+$burger-height:3px;
+$burger-width:1.8em;
+$burger-color: black;
+
+.hamburger-container{
+	position:relative;
+}
+
+.hamburger-filling{
+	height:$burger-height;
+	border-radius:$burger-height;
+	background-color:$burger-color;
+	width:$burger-width;
+	position:relative;
+
+	&:before, &:after {
+		height:$burger-height;
+		width:$burger-width;
+		background-color:$burger-color;
+		position: absolute;
+		left:0;
+		content: '';
+		transform-origin: $burger-width/14 center;
+	}
+
+	&:before { bottom: -10px; }
+	&:after { top: -10px; }
+}

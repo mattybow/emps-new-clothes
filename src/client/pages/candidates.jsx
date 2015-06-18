@@ -1,5 +1,6 @@
 import React from 'react';
 import MCandidatesViewContainer from '../components/martyCandidatesViewCont';
+import Hamburger from '../components/hamburger';
 
 import cx from 'classnames';
 
@@ -11,8 +12,9 @@ export default React.createClass({
 		return (
 			<div>
 				<div className="page-header">
-					<p>the</p>
-					<h2>candidates</h2>
+					<span>the</span>
+					<span className="font3x">candidates</span>
+					<div id="burger"><Hamburger /></div>
 				</div>
 				<MCandidatesViewContainer />
 			</div>
