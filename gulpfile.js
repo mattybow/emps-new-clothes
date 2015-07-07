@@ -4,6 +4,7 @@
 
 var bg = require('gulp-bg');
 var eslint = require('gulp-eslint');
+var env = require('gulp-env');
 var gulp = require('gulp');
 var harmonize = require('harmonize');
 var jest = require('jest-cli');
@@ -22,6 +23,11 @@ var args = yargs
 
 gulp.task('env', function() {
   process.env.NODE_ENV = args.production ? 'production' : 'development';
+});
+gulp.task('set-env', function () {
+    env({
+        file: ".env"
+    });
 });
 
 gulp.task('build-webpack-production', webpackBuild(makeWebpackConfig(false)));
@@ -63,6 +69,6 @@ gulp.task('test', function(done) {
   runSequence('eslint', 'jest', 'build-webpack-production', done);
 });
 
-gulp.task('server', ['env', 'build'], bg('node', 'src/server'));
+gulp.task('server', ['set-env', 'env', 'build'], bg('node', 'src/server'));
 
 gulp.task('default', ['server']);

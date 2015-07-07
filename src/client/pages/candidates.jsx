@@ -1,5 +1,5 @@
 import React from 'react';
-import MCandidatesViewContainer from '../components/martyCandidatesViewCont';
+import ReduxCandidates from '../containers/CandidatesContainer';
 import Hamburger from '../components/hamburger';
 
 import cx from 'classnames';
@@ -16,7 +16,7 @@ export default React.createClass({
 					<span className="font3x">candidates</span>
 					<div id="burger"><Hamburger /></div>
 				</div>
-				<MCandidatesViewContainer />
+				<ReduxCandidates />
 			</div>
 		);
 	}

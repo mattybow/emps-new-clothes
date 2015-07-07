@@ -67,9 +67,9 @@ module.exports = function(isDevelopment) {
       }, {
         exclude: /node_modules/,
         loaders: isDevelopment ? [
-          'react-hot', 'babel-loader'
+          'react-hot', 'babel-loader?stage=0&optional=runtime'
         ] : [
-          'babel-loader'
+          'babel-loader?stage=0&optional=runtime'
         ],
         test: /\.jsx?$/
       }].concat(stylesLoaders())
@@ -89,7 +89,8 @@ module.exports = function(isDevelopment) {
             NODE_ENV: JSON.stringify(isDevelopment ? 'development' : 'production'),
             IS_BROWSER: true
           }
-        })
+        }),
+        new webpack.DefinePlugin({__CLIENT__: true, __SERVER__: false}),
       ];
       if (isDevelopment)
         plugins.push(

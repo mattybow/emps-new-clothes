@@ -17,8 +17,9 @@ const deviceWidths = {
 
 export default class App extends React.Component {
 
-  constructor(props){
-    super(props);
+  constructor(props,context){
+    super(props,context);
+    console.log(props,context);
     this.state={device:'unknown'};
   }
 
@@ -53,7 +54,7 @@ export default class App extends React.Component {
     return (
       <DocumentTitle title='faceValue'>
         <div className={classes}>
-          <RouteHandler />
+          {this.props.children}
         </div>
       </DocumentTitle>
     );

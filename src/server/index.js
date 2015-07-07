@@ -15,5 +15,11 @@ if (config.isProduction || require('piping')(config.piping)) {
     require.extensions['.' + ext] = function() {};
   });
 
+  /**
+   * Define isomorphic constants.
+   */
+  global.__CLIENT__ = false;
+  global.__SERVER__ = true;
+
   require('./main');
 }

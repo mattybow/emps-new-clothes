@@ -23,15 +23,16 @@ _.forEach(candidates.split(' '),function(candidate){
 export default function() {
 
   const app = express();
-  const connectionString = 'q2_2015';
-  var db = mongojs(connectionString,['ballots']);
+  const connectionString = process.env.MONGO_URL;
+  if(!connectionString) console.log('==========NO MONGO_URL PROVIDED==========');
+  var db = mongojs(connectionString,['candidates']);
   db.on('ready',function(){
     console.log('DB CONNECTION ESTABLISHED');
   });
   db.on('error',function(err) {
       console.log('database error', err);
   });
-  db.ballots.findOne({},function(err,doc){
+  db.candidates.findOne({},function(err,doc){
     if (err) throw err;
     var message = _.isEmpty(doc) ? '[DB]: Connection Failed':'[DB]: Connected';
     console.log(message);
@@ -56,7 +57,17 @@ export default function() {
   });
 
   app.get('/all-candidates',(req,res)=>{
-    res.json({data:['clinton','bush']});
+    var prom = new Promise((resolve,reject)=>{
+      db.candidates.find({},function(err,doc){          //async db access
+        if (err) reject(err);
+        console.log('DB RETURNED');
+        resolve(doc);
+      });
+    }).then((doc)=>{
+      res.json({data:doc});
+    }).catch((err)=>{
+      res.json({ok:false, err:err});
+    });
   });
 
   app.get('*', (req, res) => {

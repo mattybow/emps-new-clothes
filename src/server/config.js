@@ -11,6 +11,6 @@ module.exports = {
     hook: true
   },
   port: process.env.PORT || 8000,
-  version: require('../../package').version,
+  //version: require('../../package').version,
   webpackStylesExtensions: ['css', 'less', 'sass', 'scss', 'styl']
 };
